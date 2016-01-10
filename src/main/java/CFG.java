@@ -32,8 +32,11 @@ public class CFG {
         reg.register("VP", new String[]{"verbs", "verbs NP", "verbs NP PP", "verbs PP"}, false);
         reg.register("PP", new String[]{"prepositions NP"}, false);
         System.out.println(getQuestion(reg));
-        for(int i = 0; i < Math.random() * 3 + 2; ++i) {
-            System.out.println(getSentence(reg));
+        for(int n = 0; n < 10; ++n) {
+            for (int i = 0; i < Math.random() * 8 + 6; ++i) {
+                System.out.print("  " + getSentence(reg));
+            }
+            System.out.println("\n\t");
         }
     }
 
